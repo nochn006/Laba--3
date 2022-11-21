@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" class="input1" value="1" />
+      <input type="text" class="input1" value="2" />
+      <input type="text" class="input1" value="3" />
+      <input type="text" class="input1" value="4" />
+      <input type="text" class="input1" value="5" />
+      <input type="text" class="input1" value="6" />
+    </form>
+
+    <button class="btn">нажать</button>
+    <script>
+      const getBtn1 = document.querySelector(".btn");
+
+      getBtn1.addEventListener("click", () => {
+        const getForm1 = document.querySelector(".form");
+
+        let sum = 0;
+        for (let i = 0; i < getForm1.elements.length; i += 1) {
+          sum += Number(getForm1.elements[i].value);
+        }
+        console.log(sum);
+      });
+    </script>
+  </body>
+</html>
